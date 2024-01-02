@@ -14,7 +14,7 @@ dnsrecord=1.mrcode.cloud
 
 ## Cloudflare authentication details
 ## keep these private
-cloudflare_auth_email=morixplus@gmai.com
+cloudflare_auth_email=morixplus@gmail.com
 cloudflare_auth_key=7dc97cbe71b3406a21e345b50565b41f19032
 
 
