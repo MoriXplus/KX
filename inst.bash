@@ -10,7 +10,7 @@ sudo apt install jq
 # Cloudflare zone is the zone which holds the record
 zone=mrcode.cloud
 # dnsrecord is the A record which will be updated
-dnsrecord=1.mrcode.coud
+dnsrecord=1.mrcode.cloud
 
 ## Cloudflare authentication details
 ## keep these private
