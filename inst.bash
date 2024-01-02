@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo apt install jq
 # A bash script to update a Cloudflare DNS A record with the external IP of the source machine
 # Used to provide DDNS service for my home
 # Needs the DNS record pre-creating on Cloudflare
@@ -8,14 +8,14 @@
 #export https_proxy=http://<proxyuser>:<proxypassword>@<proxyip>:<proxyport>
 
 # Cloudflare zone is the zone which holds the record
-zone=example.com
+zone=mrcode.cloud
 # dnsrecord is the A record which will be updated
-dnsrecord=www.example.com
+dnsrecord=1.mrcode.coud
 
 ## Cloudflare authentication details
 ## keep these private
-cloudflare_auth_email=me@cloudflare.com
-cloudflare_auth_key=1234567890abcdef1234567890abcdef
+cloudflare_auth_email=morixplus@gmai.com
+cloudflare_auth_key=7dc97cbe71b3406a21e345b50565b41f19032
 
 
 # Get the current external IP address
@@ -52,3 +52,6 @@ curl -s -X PUT "https://api.cloudflare.com/client/v4/zones/$zoneid/dns_records/$
   -H "X-Auth-Key: $cloudflare_auth_key" \
   -H "Content-Type: application/json" \
   --data "{\"type\":\"A\",\"name\":\"$dnsrecord\",\"content\":\"$ip\",\"ttl\":1,\"proxied\":false}" | jq
+
+  
+  bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
